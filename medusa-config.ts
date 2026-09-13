@@ -17,6 +17,10 @@ module.exports = defineConfig({
       jwtSecret: process.env.JWT_SECRET || "supersecret",
       cookieSecret: process.env.COOKIE_SECRET || "supersecret",
     },
+        currency: {
+      default: "usd",
+      supported: ["usd", "eur"],
+    },
   },
   admin: {
     // Leave empty so the admin Vite bundle uses same-origin relative URLs.
